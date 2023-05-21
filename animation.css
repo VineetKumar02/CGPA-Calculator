@@ -1,0 +1,215 @@
+/* Code for The Background Animation */
+.box-area {
+	position: fixed;
+	/* So that it doesn't move when scrolled */
+	top: 0;
+	left: 0;
+	margin-top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.box-area li {
+	position: absolute;
+	/* So that it overlaps and displays anywhere */
+	display: block;
+	list-style: none;
+	background: rgba(255, 255, 255, 0.205);
+	animation: animate 20s linear infinite;
+	bottom: 100px;
+}
+
+/* Assign size, position, animatiobn properties for each box */
+.box-area li:nth-child(1) {
+	left: 2%;
+	width: 150px;
+	height: 150px;
+	animation-delay: 0s;
+	animation-duration: 8s;
+}
+
+.box-area li:nth-child(2) {
+	left: 5%;
+	width: 50px;
+	height: 50px;
+	animation-delay: 5s;
+	animation-duration: 7s;
+}
+
+.box-area li:nth-child(3) {
+	left: 15%;
+	width: 90px;
+	height: 90px;
+	animation-delay: 2s;
+	animation-duration: 9s;
+}
+
+.box-area li:nth-child(4) {
+	left: 15%;
+	width: 30px;
+	height: 30px;
+	animation-delay: 4s;
+	animation-duration: 9s;
+}
+
+.box-area li:nth-child(5) {
+	left: 20%;
+	width: 100px;
+	height: 100px;
+	animation-delay: 1s;
+	animation-duration: 8s;
+}
+
+.box-area li:nth-child(6) {
+	left: 70%;
+	width: 80px;
+	height: 80px;
+	animation-delay: 0s;
+	animation-duration: 7s;
+}
+
+.box-area li:nth-child(7) {
+	left: 77%;
+	width: 40px;
+	height: 40px;
+	animation-delay: 1s;
+	animation-duration: 6s;
+}
+
+.box-area li:nth-child(8) {
+	left: 81%;
+	width: 100px;
+	height: 100px;
+	animation-delay: 3.5s;
+	animation-duration: 9s;
+}
+
+.box-area li:nth-child(9) {
+	left: 90%;
+	width: 70px;
+	height: 70px;
+	animation-delay: 3s;
+	animation-duration: 7s;
+}
+
+.box-area li:nth-child(10) {
+	left: 90%;
+	width: 30px;
+	height: 30px;
+	animation-delay: 4s;
+	animation-duration: 5s;
+}
+
+@keyframes animate {
+	0% {
+		transform: translateY(0) rotate(0deg);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateY(-800px) rotate(360deg);
+		opacity: 0;
+	}
+}
+
+
+/* Code for the Animation in Footer .... Social Media Icons */
+.wrapper {
+	margin: 5px;
+}
+
+.wrapper .button {
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	margin: 0 5px;
+	overflow: hidden;
+	background: #fff;
+	border-radius: 50px;
+	cursor: pointer;
+	box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease-out;
+}
+
+.wrapper .button:hover {
+	width: 11rem;
+	text-align: left;
+}
+
+/* To rotate icon by 360 degree */
+.wrapper .button:hover i {
+	transform: rotate(360deg);
+}
+
+.wrapper .button .icon {
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	text-align: center;
+	border-radius: 50px;
+}
+
+.wrapper .button .icon i {
+	font-size: 25px;
+	line-height: 50px;
+	color: #fff;
+	transition-duration: 0.8s;
+	transition-property: transform;
+}
+
+/* Set Color for each Icon */
+.wrapper .button:nth-child(1) .icon {
+	background: #4267B2;
+}
+
+.wrapper .button:nth-child(2) .icon {
+	background: #1DA1F2;
+}
+
+.wrapper .button:nth-child(3) .icon {
+	background: radial-gradient(circle at 30% 140%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.wrapper .button:nth-child(4) .icon {
+	background: #0072b1;
+}
+
+.wrapper .button:nth-child(5) .icon {
+	background: #171515;
+}
+
+.wrapper .button span {
+	font-size: 20px;
+	font-weight: 500;
+	margin-left: 10px;
+	transition: all 0.3s ease-out;
+}
+
+/* Set Color for each text */
+.wrapper .button:nth-child(1) span {
+	color: #4267B2;
+}
+
+.wrapper .button:nth-child(2) span {
+	color: #1DA1F2;
+}
+
+.wrapper .button:nth-child(3) span {
+	color: #E1306C;
+}
+
+.wrapper .button:nth-child(4) span {
+	color: #0072b1;
+}
+
+.wrapper .button:nth-child(5) span {
+	color: #171515;
+}
+
+/* To prevent animation in mobile view */
+@media screen and (max-width: 500px) {
+	.wrapper .button:hover {
+		width: 50px;
+	}
+}

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CGPA Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="animation.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <!-- For icons -->
+</head>
+
+<body>
+
+    <div id="app">
+
+        <!-- For Adding Background image -->
+        <div class="background">
+            <img src="images/download.svg">
+        </div>
+
+        <!-- Main Content box -->
+        <div class="content">
+
+            <!-- Text on Top -->
+            <div>
+                <h1 class="top">CGPA Calculator</h1>
+                <h3 class="top">Calculate your Semester CGPA, Cummulative CGPA and check how much you need next semester
+                    to cross that legendary CGPA Mark</h3>
+            </div>
+
+            <!-- Main1 : Semester CGPA calculation
+            Block is used bcoz this shld be displayed by default -->
+            <div id="main1" style="display:block">
+
+                <!-- To select the semester -->
+                <div class="semester">
+                    <span>SEMESTER</span>
+                    <select>
+                        <option value="0">Semester 1</option>
+                        <option value="1">Semester 2</option>
+                        <option value="2">Semester 3</option>
+                        <option value="3">Semester 4</option>
+                        <option value="4">Semester 5</option>
+                        <option value="5">Semester 6</option>
+                        <option value="6">Semester 7</option>
+                        <option value="7">Semester 8</option>
+                    </select>
+                </div>
+
+                <!-- To select the Calculation method Sem CGPA is set as active-->
+                <div class="selection">
+                    <button class="active">Semester CGPA</button>
+                    <button id="selector2">Cumulative CGPA</button>
+                </div>
+
+                <!-- Table area for Main1 - Subject name, scores -->
+                <table class="course-list">
+                    <tr class="course-heading">
+                        <td></td>
+                        <td>Select Credit:</td>
+                        <td>Select Grade:</td>
+                    </tr>
+                    <tr class="course">
+                        <td class="name">Subject 1</td>
+                        <td colspan=""><label for="credit">Select Credit:</label>
+
+                            <select name="credit1" id="credit1">
+                                <option value="0">--Select--</option>
+                                <option value="5">5</option>
+                                <option value="4">4</option>
+                                <option value="3.5">3.5</option>
+                                <option value="3">3</option>
+                                <option value="2">2</option>
+                                <option value="1.5">1.5</option>
+                                <option value="1">1</option>
+                            </select>
+                        </td>
+
+                        <td colspan=""><label for="grade">Select Grade:</label>
+                            <select name="grade1" id="grade1">
+                                <option value="0">--Select--</option>
+                                <option value="10">O</option>
+                                <option value="9">A+</option>
+                                <option value="8">A</option>
+                                <option value="7">B+</option>
+                                <option value="6">B</option>
+                                <option value="-1">RA</option>
+                            </select>
+                        </td>
+                        <!---->
+                    </tr>
+                    <tr class="course">
+                        <td class="name">Subject 2</td>
+                        <td colspan=""><label for="credit">Select Credit:</label>
+                            <select name="credit2" id="credit2">
+                                <option value="0">--Select--</option>
+                                <option value="5">5</option>
+                                <option value="4">4</option>
+                                <option value="3.5">3.5</option>
+                                <option value="3">3</option>
+                                <option value="2">2</option>
+                                <option value="1.5">1.5</option>
+                                <option value="1">1</option>
+                            </select>
+                        </td>
+
+                        <td colspan=""><label for="grade">Select Grade:</label>
+                            <select name="grade2" id="grade2">
+                                <option value="0">--Select--</option>
+                                <option value="10">O</option>
+                                <option value="9">A+</option>
+                                <option value="8">A</option>
+                                <option value="7">B+</option>
+                                <option value="6">B</option>
+                                <option value="-1">RA</option>
+                            </select>
+                        </td>
+                        <!---->
+                    </tr>
+                    <tr class="course">
+                        <td class="name">Subject 3</td>
+                        <td colspan=""><label for="credit">Select Credit:</label>
+                            <select name="credit3" id="credit3">
+                                <option value="0">--Select--</option>
+                                <option value="5">5</option>
+                                <option value="4">4</option>
+                                <option value="3.5">3.5</option>
+                                <option value="3">3</option>
+                                <option value="2">2</option>
+                                <option value="1.5">1.5</option>
+                                <option value="1">1</option>
+                            </select>
+                        </td>
+
+                        <td colspan=""><label for="grade">Select Grade:</label>
+                            <select name="grade3" id="grade3">
+                                <option value="0">--Select--</option>
+                                <option value="10">O</option>
+                                <option value="9">A+</option>
+                                <option value="8">A</option>
+                                <option value="7">B+</option>
+                                <option value="6">B</option>
+                                <option value="-1">RA</option>
+                            </select>
+                        </td>
+                        <!---->
+                    </tr>
+                    <tr class="course">
+                        <td class="name">Subject 4</td>
+                        <td colspan=""><label for="credit">Select Credit:</label>
+                            <select name="credit4" id="credit4">
+                                <option value="0">--Select--</option>
+                                <option value="5">5</option>
+                                <option value="4">4</option>
+                                <option value="3.5">3.5</option>
+                                <option value="3">3</option>
+                                <option value="2">2</option>
+                                <option value="1.5">1.5</option>
+                                <option value="1">1</option>
+                            </select>
+                        </td>
+
+                        <td colspan=""><label for="grade">Select Grade:</label>
+                            <select name="grade4" id="grade4">
+                                <option value="0">--Select--</option>
+                                <option value="10">O</option>
+                                <option value="9">A+</option>
+                                <option value="8">A</option>
+                                <option value="7">B+</option>
+                                <option value="6">B</option>
+                                <option value="-1">RA</option>
+                            </select>
+                        </td>
+                        <!---->
+                    </tr>
+                    <tr class="course">
+                        <td class="name">Subject 5</td>
+                        <td colspan=""><label for="credit">Select Credit:</label>
+                            <select name="credit5" id="credit5">
+                                <option value="0">--Select--</option>
+                                <option value="5">5</option>
+                                <option value="4">4</option>
+                                <option value="3.5">3.5</option>
+                                <option value="3">3</option>
+                                <option value="2">2</option>
+                                <option value="1.5">1.5</option>
+                                <option value="1">1</option>
+                            </select>
+                        </td>
+
+                        <td colspan=""><label for="grade">Select Grade:</label>
+                            <select name="grade5" id="grade5">
+                                <option value="0">--Select--</option>
+                                <option value="10">O</option>
+                                <option value="9">A+</option>
+                                <option value="8">A</option>
+                                <option value="7">B+</option>
+                                <option value="6">B</option>
+                                <option value="-1">RA</option>
+                            </select>
+                        </td>
+                        <!---->
+                    </tr>
+                    <tr class="course">
+                        <td class="name">Subject 6</td>
+                        <td colspan=""><label for="credit">Select Credit:</label>
+                            <select name="credit6" id="credit6">
+                                <option value="0">--Select--</option>
+                                <option value="5">5</option>
+                                <option value="4">4</option>
+                                <option value="3.5">3.5</option>
+                                <option value="3">3</option>
+                                <option value="2">2</option>
+                                <option value="1.5">1.5</option>
+                                <option value="1">1</option>
+                            </select>
+                        </td>
+
+                        <td colspan=""><label for="grade">Select Grade:</label>
+                            <select name="grade6" id="grade6">
+                                <option value="0">--Select--</option>
+                                <option value="10">O</option>
+                                <option value="9">A+</option>
+                                <option value="8">A</option>
+                                <option value="7">B+</option>
+                                <option value="6">B</option>
+                                <option value="-1">RA</option>
+                            </select>
+                        </td>
+                        <!---->
+                    </tr>
+                    <tr class="course">
+                        <td class="name">Lab 1</td>
+                        <td colspan=""><label for="credit">Select Credit:</label>
+                            <select name="credit7" id="credit7">
+                                <option value="0">--Select--</option>
+                                <option value="2">2</option>
+                                <option value="1.5">1.5</option>
+                                <option value="1">1</option>
+                            </select>
+                        </td>
+
+                        <td colspan=""><label for="grade">Select Grade:</label>
+                            <select name="grade7" id="grade7">
+                                <option value="0">--Select--</option>
+                                <option value="10">O</option>
+                                <option value="9">A+</option>
+                                <option value="8">A</option>
+                                <option value="7">B+</option>
+                                <option value="6">B</option>
+                                <option value="-1">RA</option>
+                            </select>
+                        </td>
+                        <!---->
+                    <tr class="course">
+                        <td class="name">Lab 2</td>
+                        <td colspan=""><label for="credit">Select Credit:</label>
+                            <select name="credit8" id="credit8">
+                                <option value="0">--Select--</option>
+                                <option value="2">2</option>
+                                <option value="1.5">1.5</option>
+                                <option value="1">1</option>
+                            </select>
+                        </td>
+
+                        <td colspan=""><label for="grade">Select Grade:</label>
+                            <select name="grade8" id="grade8">
+                                <option value="0">--Select--</option>
+                                <option value="10">O</option>
+                                <option value="9">A+</option>
+                                <option value="8">A</option>
+                                <option value="7">B+</option>
+                                <option value="6">B</option>
+                                <option value="-1">RA</option>
+                            </select>
+                        </td>
+                        <!---->
+                    </tr>
+                    <tr class="course">
+                        <td class="name">Lab 3</td>
+                        <td colspan=""><label for="credit">Select Credit:</label>
+                            <select name="credit9" id="credit9">
+                                <option value="0">--Select--</option>
+                                <option value="2">2</option>
+                                <option value="1.5">1.5</option>
+                                <option value="1">1</option>
+                            </select>
+                        </td>
+
+                        <td colspan=""><label for="grade">Select Grade:</label>
+                            <select name="grade9" id="grade9">
+                                <option value="0">--Select--</option>
+                                <option value="10">O</option>
+                                <option value="9">A+</option>
+                                <option value="8">A</option>
+                                <option value="7">B+</option>
+                                <option value="6">B</option>
+                                <option value="-1">RA</option>
+                            </select>
+                        </td>
+                        <!---->
+                    </tr>
+                </table>
+
+                <!-- To display the result on Main1 page -->
+                <div class="displayresult">
+                    <div>
+                        <span>Your CGPA is: </span>
+                    </div>
+                    <div>
+                        <span class="blueresult" id="main-result1"></span>
+                        <span>/10</span>
+                    </div>
+                </div>
+
+                <!-- The buttons on Main1 -->
+                <div class="buttons">
+                    <button id="cgpa1" class="calculate">Calculate CGPA</button>
+                    <button id="reset1" class="reset">Reset</button>
+                </div>
+
+                <!-- The Popup for Main1 -->
+                <div class="popup" id="popup1">
+                    <img src="images/tick.png" alt="Green Tick">
+                    <h2>Your CGPA is</h2>
+                    <div>
+                        <span id="pop-up-result1"></span>
+                        <span>/10</span><br><br>
+                    </div>
+                    <button onclick="closePopup1()">OK</button>
+                </div>
+
+            </div>
+
+            <!-- Main1 : Cumilative CGPA calculation
+            None is used bcoz this shld be hidden by default -->
+            <div id="main2" style="display:none">
+
+                <!-- Select the semesters completed -->
+                <div class="semester small">
+                    <span>Semesters Completed</span>
+                    <select id="semdone">
+                        <option value="1">1 Done</option>
+                        <option value="2">2 Done</option>
+                        <option value="3">3 Done</option>
+                        <option value="4">4 Done</option>
+                        <option value="5">5 Done</option>
+                        <option value="6">6 Done</option>
+                        <option value="7">7 Done</option>
+                        <option value="8">8 Done</option>
+                    </select>
+                </div>
+
+                <!-- Selection of Calculation Mode - CGPA is set to active -->
+                <div class="selection">
+                    <button id="selector1">Semester CGPA</button>
+                    <button class="active">Cumulative CGPA</button>
+                </div>
+
+                <!-- List of semesters -->
+                <div class="sem-list">
+                    <div class="sem-data">
+                        <p>Semester 1</p>
+                        <input id="cgpasem1" type="number" placeholder="GPA of Sem 1" max="10" min="0">
+                        <input id="sem1credit" type="number" placeholder="Credits for Sem 1" min="0">
+                    </div>
+                    <div class="sem-data">
+                        <p>Semester 2</p>
+                        <input id="cgpasem2" type="number" placeholder="GPA of Sem 2" max="10" min="0">
+                        <input id="sem2credit" type="number" placeholder="Credits for Sem 2" min="0">
+                    </div>
+                    <div class="sem-data">
+                        <p>Semester 3</p>
+                        <input id="cgpasem3" type="number" placeholder="GPA of Sem 3" max="10" min="0">
+                        <input id="sem3credit" type="number" placeholder="Credits for Sem 3" min="0">
+                    </div>
+                    <div class="sem-data">
+                        <p>Semester 4</p>
+                        <input id="cgpasem4" type="number" placeholder="GPA of Sem 4" max="10" min="0">
+                        <input id="sem4credit" type="number" placeholder="Credits for Sem 4" min="0">
+                    </div>
+                    <div class="sem-data">
+                        <p>Semester 5</p>
+                        <input id="cgpasem5" type="number" placeholder="GPA of Sem 5" max="10" min="0">
+                        <input id="sem5credit" type="number" placeholder="Credits for Sem 5" min="0">
+                    </div>
+                    <div class="sem-data">
+                        <p>Semester 6</p>
+                        <input id="cgpasem6" type="number" placeholder="GPA of Sem 6" max="10" min="0">
+                        <input id="sem6credit" type="number" placeholder="Credits for Sem 6" min="0">
+                    </div>
+                    <div class="sem-data">
+                        <p>Semester 7</p>
+                        <input id="cgpasem7" type="number" placeholder="GPA of Sem 7" max="10" min="0">
+                        <input id="sem7credit" type="number" placeholder="Credits for Sem 7" min="0">
+                    </div>
+                    <div class="sem-data">
+                        <p>Semester 8</p>
+                        <input id="cgpasem8" type="number" placeholder="GPA of Sem 8" max="10" min="0">
+                        <input id="sem8credit" type="number" placeholder="Credits for Sem 8" min="0">
+                    </div>
+                </div>
+
+                <!-- To display the result on Main2 page -->
+                <div class="displayresult">
+                    <div>
+                        <span>Your CGPA is: </span>
+                    </div>
+                    <div>
+                        <span class="blueresult" id="main-result2"></span>
+                        <span>/10</span>
+                    </div>
+                </div>
+
+                <!-- The buttons on Main2 -->
+                <div class="buttons">
+                    <button id="cgpa2" class="calculate">Calculate CGPA</button>
+                    <button id="reset2" class="reset">Reset</button>
+                </div>
+
+                <!-- The Popup for Main2 -->
+                <div class="popup" id="popup2">
+                    <img src="images/tick.png" alt="Green Tick">
+                    <h2>Your CGPA is</h2>
+                    <div>
+                        <span id="pop-up-result2"></span>
+                        <span>/10</span><br><br>
+                    </div>
+                    <button onclick="closePopup2()">OK</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wrapper for animation area -->
+        <div class="animation-area">
+            <ul class="box-area">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer content -->
+    <div class="footer">
+        Do Follow Me On:
+        <div class="wrapper">
+            <div class="button">
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <span>Facebook</span>
+            </div>
+            <div class="button">
+                <div class="icon">
+                    <i class="fab fa-twitter"></i>
+                </div>
+                <span>Twitter</span>
+            </div>
+            <div class="button">
+                <div class="icon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <span>Instagram</span>
+            </div>
+            <div class="button">
+                <div class="icon">
+                    <i class="fab fa-linkedin"></i>
+                </div>
+                <span>LinkedIn</span>
+            </div>
+            <div class="button">
+                <div class="icon">
+                    <i class="fab fa-github"></i>
+                </div>
+                <span>GitHub</span>
+            </div>
+        </div>
+        <span>A website created by Vineet Kumar ❤️<br>IT 3rd Yr at SSN College of Engineering</span>
+    </div>
+
+</body>
+
+<script src="logic.js"></script>
+<script src="links.js"></script>
+
+</html>

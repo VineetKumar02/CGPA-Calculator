@@ -1,0 +1,390 @@
+* {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+label,
+td,
+tr,
+p,
+pre,
+span {
+    color: black;
+}
+
+td {
+    padding: 10px 10px 5px 5px;
+}
+
+select {
+    border-radius: 5px;
+    padding: 2px;
+}
+
+
+/* For background image */
+#app .background img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    object-fit: contain;
+    z-index: -999;
+}
+
+/* Properties for Content box */
+/* Flex Col - So that all items are in column wise */
+#app .content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 25%;
+    margin-bottom: 170px;
+}
+
+/* Properties for text in top part */
+#app .content h1 {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 700;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+#app .content h3 {
+    color: #fff;
+    line-height: 1.5rem;
+    font-weight: normal;
+    display: block;
+    letter-spacing: 0.5px;
+    margin-bottom: 40px;
+}
+
+/* Properties for Main1 */
+#app .content #main1 {
+    background: #fff;
+    box-shadow: 0 5px 20px 0 hsl(0deg 0% 70% / 50%);
+    border-radius: 1rem;
+    padding-bottom: 30px;
+    z-index: 10;
+}
+
+.semester {
+    border-radius: 1rem 1rem 0 0;
+    padding: .75rem;
+    background-color: #eeebeb;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.semester span {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.semester select {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2d85fd;
+    background-color: #fff;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #ececec;
+    border-radius: 100px;
+    appearance: none;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNXB4IiBoZWlnaHQ9IjNweCIgdmlld0JveD0iMCAwIDUgMyIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggNTAuMSAoNTUwNDQpIC0gaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoIC0tPgogICAgPHRpdGxlPmFycm93X2Ryb3BfZG93biAtIG1hdGVyaWFsPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+PC9kZWZzPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9IkRyaWJibGUtVGh1bWJuaWxfMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTU0NC4wMDAwMDAsIC0yMjcuMDAwMDAwKSIgZmlsbD0iIzJEODVGRCI+CiAgICAgICAgICAgIDxnIGlkPSJHcm91cC03IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MC4wMDAwMDAsIDcyLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPGcgaWQ9Ikdyb3VwLTQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMDAwMDAwLCAwLjYwMjQxMCkiPgogICAgICAgICAgICAgICAgICAgIDxnIGlkPSJHcm91cC02IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNzUuMDAwMDAwLCAzOC4wNjI1MDApIj4KICAgICAgICAgICAgICAgICAgICAgICAgPGcgaWQ9Ikdyb3VwLTUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQuMjI0MTM4LCA5NC43NDEzNzkpIj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxnIGlkPSJEeW5hbWljLWdyb3VwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNDcuNDEzNzkzLCAxMy44NzkzMTApIj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZyBpZD0iODoxMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTYuODk2NTUyLCA0LjgyNzU4NikiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iYXJyb3dfZHJvcF9kb3duLS0tbWF0ZXJpYWwiIHBvaW50cz0iNTAuNjg5NjU1MiAzLjAxNzI0MTM4IDU1LjUxNzI0MTQgMy4wMTcyNDEzOCA1My4xMDM0NDgzIDUuNDMxMDM0NDgiPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==);
+    background-repeat: no-repeat;
+    background-position: 88%;
+    background-size: 7px;
+}
+
+.semester select option {
+    color: black;
+}
+
+/* For Selecting Mode Bar */
+#app .content .selection {
+    display: flex;
+    flex-direction: row;
+}
+
+
+#app .content .selection button {
+    cursor: pointer;
+    width: 50%;
+    padding: 0.75rem;
+    background: #fff;
+    border: none;
+    font-size: .9rem;
+    color: #8e8e8e;
+    text-transform: uppercase;
+    transition-timing-function: ease-in-out;
+    transition-duration: .25s;
+    transition-property: all;
+}
+
+/* properties when an option is selected/active */
+#app .content .selection .active {
+    border-bottom: 2.5px solid #055fdd;
+    font-weight: bold;
+    font-size: .9rem;
+    color: #055fdd;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: table;
+    box-sizing: border-box;
+    text-indent: initial;
+}
+
+.course-list {
+    margin: 1rem 0;
+    width: 100%;
+}
+
+.course-list tr .name {
+    padding: 0.6rem;
+}
+
+.course-heading td,
+.name {
+    font-weight: bold;
+}
+
+.course-heading td {
+    padding-bottom: 10px;
+}
+
+
+/* Properties for Main2 */
+#app .content #main2 {
+    background: #fff;
+    box-shadow: 0 5px 20px 0 hsl(0deg 0% 70% / 50%);
+    border-radius: 1rem;
+    padding-bottom: 30px;
+    margin-left: 50px;
+    min-height: 300px;
+    max-width: 600px;
+    z-index: 10;
+}
+
+.semester-list {
+    margin: 1rem 0;
+    width: 100%;
+}
+
+.sem-data {
+    background-color: #fff;
+    padding: 5px 50px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    display: none;
+}
+
+.sem-data p {
+    font-weight: bold;
+    min-width: 100px;
+}
+
+.sem-data input {
+    padding: 0.5rem 1rem;
+    font-weight: 700;
+    font-size: .8rem;
+    color: #606060;
+    border: 1px solid #ececec;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.sem-data input[type=number] {
+    min-width: 30%;
+    margin: 0 1rem;
+}
+
+
+/* Properties for calculate button */
+.calculate {
+    color: white;
+    font-size: large;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    background-color: #2d85fd;
+    border-color: #2d85fd;
+    padding: 15px 20px;
+    margin: 15px;
+    box-shadow: inset 0 0 0 0 #055fdd;
+    transition: ease-out 0.3s;
+    cursor: pointer;
+}
+
+/* Properties for reset button */
+.reset {
+    color: white;
+    font-size: large;
+    font-weight: 700;
+    border-radius: 15px;
+    background-color: #fd2d2d;
+    border-color: #fd2d2d;
+    letter-spacing: 1px;
+    padding: 15px 20px;
+    margin: 0 15px;
+    box-shadow: inset 0 0 0 0 #dc0a0a;
+    transition: ease-out 0.4s;
+    cursor: pointer;
+}
+
+/* Button Hover Animation - left to right color */
+.calculate:hover {
+    box-shadow: inset 190px 0 0 0 #055fdd;
+}
+
+.reset:hover {
+    box-shadow: inset 100px 0 0 0 #dc0a0a;
+}
+
+
+/* Properties for displaying result on Main Page */
+.displayresult {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-evenly;
+    display: none;
+}
+
+/* Make font big and blue for calculated cgpa value */
+.displayresult .blueresult {
+    color: #2d85fd;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+#pop-up-result1,
+#pop-up-result2 {
+    font-size: xx-large;
+}
+
+
+/* Properties for Pop-Up Window */
+.popup {
+    background: #fff;
+    border-radius: 10px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 275px;
+    transform: translate(-50%, -50%) scale(0);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.popup div {
+    margin-top: 20px;
+}
+
+.popup img {
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.popup h2 {
+    font-weight: 500;
+    margin: 30px 0 10px;
+    font-size: 38px;
+}
+
+/* For OK Button of pop-up */
+.popup button {
+    font-weight: 600;
+    font-size: medium;
+    width: 60%;
+    margin-top: 10px;
+    padding: 10px 0;
+    background: #5fc838;
+    color: #fff;
+    border: 0;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Make pop up visible with animation */
+.open-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Properties for footer */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #eceaea;
+    padding: 10px 0px;
+}
+
+/* Properties optimized for Mobile View */
+@media screen and (max-width: 780px) {
+    #app .content {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 160px;
+    }
+
+    .popup {
+        width: 220px;
+    }
+
+    .popup h2 {
+        font-size: 30px;
+    }
+
+    label {
+        display: none;
+    }
+
+    select {
+        padding: 5px;
+    }
+
+    td {
+        font-size: 15px;
+    }
+
+    .sem-data {
+        justify-content: space-evenly;
+        padding: 5px 10px;
+    }
+
+    .sem-data input[type=number] {
+        margin-left: 0;
+        min-width: 15%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #app .content {
+        margin: 0 10px;
+    }
+
+    #app .content #main2 {
+        margin-left: 0;
+    }
+
+    .small span {
+        text-transform: capitalize;
+    }
+}
