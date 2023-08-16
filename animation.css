@@ -119,7 +119,7 @@
 	margin: 5px;
 }
 
-.wrapper .button {
+.wrapper .social-media {
 	display: inline-block;
 	height: 50px;
 	width: 50px;
@@ -132,17 +132,17 @@
 	transition: all 0.3s ease-out;
 }
 
-.wrapper .button:hover {
+.wrapper .social-media:hover {
 	width: 11rem;
 	text-align: left;
 }
 
 /* To rotate icon by 360 degree */
-.wrapper .button:hover i {
+.wrapper .social-media:hover i {
 	transform: rotate(360deg);
 }
 
-.wrapper .button .icon {
+.wrapper .social-media .icon {
 	display: inline-block;
 	height: 50px;
 	width: 50px;
@@ -150,7 +150,7 @@
 	border-radius: 50px;
 }
 
-.wrapper .button .icon i {
+.wrapper .social-media .icon i {
 	font-size: 25px;
 	line-height: 50px;
 	color: #fff;
@@ -159,27 +159,23 @@
 }
 
 /* Set Color for each Icon */
-.wrapper .button:nth-child(1) .icon {
-	background: #4267B2;
-}
-
-.wrapper .button:nth-child(2) .icon {
-	background: #1DA1F2;
-}
-
-.wrapper .button:nth-child(3) .icon {
+.wrapper .social-media:nth-child(1) .icon {
 	background: radial-gradient(circle at 30% 140%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
 }
 
-.wrapper .button:nth-child(4) .icon {
+.wrapper .social-media:nth-child(2) .icon {
 	background: #0072b1;
 }
 
-.wrapper .button:nth-child(5) .icon {
+.wrapper .social-media:nth-child(3) .icon {
 	background: #171515;
 }
 
-.wrapper .button span {
+.wrapper .social-media:nth-child(4) .icon {
+	background: linear-gradient(to right, rgb(5, 117, 230), rgb(2, 27, 121));
+}
+
+.wrapper .social-media span {
 	font-size: 20px;
 	font-weight: 500;
 	margin-left: 10px;
@@ -187,29 +183,25 @@
 }
 
 /* Set Color for each text */
-.wrapper .button:nth-child(1) span {
-	color: #4267B2;
-}
-
-.wrapper .button:nth-child(2) span {
-	color: #1DA1F2;
-}
-
-.wrapper .button:nth-child(3) span {
+.wrapper .social-media:nth-child(1) span {
 	color: #E1306C;
 }
 
-.wrapper .button:nth-child(4) span {
+.wrapper .social-media:nth-child(2) span {
 	color: #0072b1;
 }
 
-.wrapper .button:nth-child(5) span {
+.wrapper .social-media:nth-child(3) span {
 	color: #171515;
+}
+
+.wrapper .social-media:nth-child(4) span {
+	color: #2656a4;
 }
 
 /* To prevent animation in mobile view */
 @media screen and (max-width: 500px) {
-	.wrapper .button:hover {
+	.wrapper .social-media:hover {
 		width: 50px;
 	}
 }
