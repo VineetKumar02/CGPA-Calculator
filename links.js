@@ -1,5 +1,4 @@
 // Contains the link for all social media handles
-
 var links = document.getElementsByClassName("social-media");
 
 links[0].addEventListener("click", () => { openlink(1) });
